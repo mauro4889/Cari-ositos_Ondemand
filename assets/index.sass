@@ -4,12 +4,14 @@ body
     margin: 0
     padding: 0
     background-color: #fef6e4
-    width: 96vw
+    width: 100vw
     height: 100vh
     background-image: url(../img/bg_mobile.jpg)
     background-size: fixed
     background-repeat: no-repeat
     font-family: 'Grape Nuts', cursive
+    @media (min-width: 767px)
+        background-image: url(../img/bg_desktop.jpg)
 
 header
     width: 100%
@@ -22,12 +24,22 @@ header
         background-repeat: no-repeat
         height: 4em
         width: 40%
+        @media (min-width: 1023px)
+            margin: 0 2%
+            font-size: 200%
     h3
         color: #001858
         width: 50%
         text-decoration: underline
         cursor: pointer
-
+        @media (min-width: 767px)
+            padding-left: 40%
+        @media (min-width: 1023px)
+            padding-left: 20%
+            font-size: 30px
+        @media (min-width: 1439px)
+            font-size: 35px
+            padding-left: 50%
 .main__container
     width: 100%
     height: 100%
@@ -35,13 +47,23 @@ header
     display: flex
     flex-direction: column
     background-color: rgba(254, 246, 228, 0.502)
+    @media (min-width: 1023px)
+        flex-direction: row
     .intro__container
         margin-top: 10%
         font-size: 20px
+        @media (min-width: 1023px)
+            width: 60%
+        @media (min-width: 1439px)
+            font-size: 40px
+            margin-top: 5%
         p
+            margin: auto
             width: 90%
             color: #001858
             text-align: center
+            @media (min-width: 1439px)
+                margin: 5% auto
     .form__container
         width: 50%
         margin: auto
@@ -49,6 +71,10 @@ header
         display: flex
         flex-direction: column
         justify-content: space-between
+        @media (min-width: 1023px)
+            width: 40%
+        @media (min-width: 1439px)
+            width: 30%
         input
             margin-top: 5%
             font-weight: bolder
@@ -56,6 +82,12 @@ header
             border: solid 1px
             border-radius: 5px
             padding-left: 5%
+            @media (min-width: 1023px)
+                width: 80%
+                margin: 5% auto
+            @media (min-width: 1439px)
+                height: 35px
+                padding-left: 3%
         .btn__enviar
             background-color: #f582ae
             color: #001858
@@ -67,3 +99,6 @@ header
             &:hover
                 background-color: #001858
                 color: #f582ae
+            @media (min-width: 1023px)
+                padding: 0
+                height: 2.5em

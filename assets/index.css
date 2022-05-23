@@ -3,12 +3,18 @@ body {
   margin: 0;
   padding: 0;
   background-color: #fef6e4;
-  width: 96vw;
+  width: 100vw;
   height: 100vh;
   background-image: url(../img/bg_mobile.jpg);
   background-size: fixed;
   background-repeat: no-repeat;
   font-family: 'Grape Nuts', cursive;
+}
+
+@media (min-width: 767px) {
+  body {
+    background-image: url(../img/bg_desktop.jpg);
+  }
 }
 
 header {
@@ -30,11 +36,38 @@ header .logo {
   width: 40%;
 }
 
+@media (min-width: 1023px) {
+  header .logo {
+    margin: 0 2%;
+    font-size: 200%;
+  }
+}
+
 header h3 {
   color: #001858;
   width: 50%;
   text-decoration: underline;
   cursor: pointer;
+}
+
+@media (min-width: 767px) {
+  header h3 {
+    padding-left: 40%;
+  }
+}
+
+@media (min-width: 1023px) {
+  header h3 {
+    padding-left: 20%;
+    font-size: 30px;
+  }
+}
+
+@media (min-width: 1439px) {
+  header h3 {
+    font-size: 35px;
+    padding-left: 50%;
+  }
 }
 
 .main__container {
@@ -51,15 +84,44 @@ header h3 {
   background-color: rgba(254, 246, 228, 0.502);
 }
 
+@media (min-width: 1023px) {
+  .main__container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
 .main__container .intro__container {
   margin-top: 10%;
   font-size: 20px;
 }
 
+@media (min-width: 1023px) {
+  .main__container .intro__container {
+    width: 60%;
+  }
+}
+
+@media (min-width: 1439px) {
+  .main__container .intro__container {
+    font-size: 40px;
+    margin-top: 5%;
+  }
+}
+
 .main__container .intro__container p {
+  margin: auto;
   width: 90%;
   color: #001858;
   text-align: center;
+}
+
+@media (min-width: 1439px) {
+  .main__container .intro__container p {
+    margin: 5% auto;
+  }
 }
 
 .main__container .form__container {
@@ -78,6 +140,18 @@ header h3 {
           justify-content: space-between;
 }
 
+@media (min-width: 1023px) {
+  .main__container .form__container {
+    width: 40%;
+  }
+}
+
+@media (min-width: 1439px) {
+  .main__container .form__container {
+    width: 30%;
+  }
+}
+
 .main__container .form__container input {
   margin-top: 5%;
   font-weight: bolder;
@@ -85,6 +159,20 @@ header h3 {
   border: solid 1px;
   border-radius: 5px;
   padding-left: 5%;
+}
+
+@media (min-width: 1023px) {
+  .main__container .form__container input {
+    width: 80%;
+    margin: 5% auto;
+  }
+}
+
+@media (min-width: 1439px) {
+  .main__container .form__container input {
+    height: 35px;
+    padding-left: 3%;
+  }
 }
 
 .main__container .form__container .btn__enviar {
@@ -100,5 +188,12 @@ header h3 {
 .main__container .form__container .btn__enviar:hover {
   background-color: #001858;
   color: #f582ae;
+}
+
+@media (min-width: 1023px) {
+  .main__container .form__container .btn__enviar {
+    padding: 0;
+    height: 2.5em;
+  }
 }
 /*# sourceMappingURL=index.css.map */
